@@ -6,10 +6,11 @@ env:
 
 jobs:
   clippy:
-    runs-on: [macos-12, x64]
+    runs-on: [macos-13]
     steps:
     - uses: actions/checkout@v4
     - run: cargo clippy --verbose
+    - run: cargo clippy --verbose --target "x86_64-apple-darwin"
     - run: rustup show
     - run: cargo clippy --version
     - run: cargo --version
