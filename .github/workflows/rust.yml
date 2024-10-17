@@ -11,3 +11,5 @@ jobs:
     - uses: actions/checkout@v4
     - run: cargo clippy --verbose
     - run: rustup show
+    - run: cargo clippy --version
+    - run: cargo --version
