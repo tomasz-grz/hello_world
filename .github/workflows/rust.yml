@@ -6,7 +6,7 @@ env:
 
 jobs:
   clippy:
-    runs-on: [macos-13]
+    runs-on: [macos-13, arm64]
     steps:
     - uses: actions/checkout@v4
     - run: cargo clippy --verbose
