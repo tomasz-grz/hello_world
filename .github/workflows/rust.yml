@@ -10,7 +10,7 @@ jobs:
     steps:
     - uses: actions/checkout@v4
     - name: install python3-requests
-      run: pipx install requests==2.32.3
+      run: pip3 install requests==2.32.3 --break-system-packages
     - run: cargo clippy --verbose
     - run: cargo clippy --verbose --target "x86_64-apple-darwin"
     - run: rustup show
